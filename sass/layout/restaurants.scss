@@ -1,0 +1,33 @@
+
+/* section restaurants */
+.restaurants{
+    background-color: #f6f6f6;
+
+    .h2{
+        margin-bottom: 2rem;
+    }
+
+    .restaurants__cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        @media (max-width: 1000px){
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+    
+    .card{
+        &__img{
+            height: 15rem;
+            border-radius: 1rem;
+            background-size: cover;
+        }
+        @for $i from 1 through 4{
+            &__img-#{$i} {
+                background-image: url("../../images/restaurants/resto-#{$i}.jpg");
+            }
+        }
+        
+    }
+}
+

@@ -1,0 +1,52 @@
+@import "../utils/mixins.scss";
+@import "../utils/variables.scss";
+
+/* Fonctionnement */
+.fonctionnement{
+  margin-top: 4rem;
+  padding: 0 2rem;
+    counter-reset: steps;
+  & ol{
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 800px){
+      flex-direction: column;
+    }
+  }
+  & li{
+    position: relative;
+    &::before{
+      content: counter(steps);
+      counter-increment: steps;
+      background-color: $couleur-primaire;
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -1rem;
+      transform: translateY(-50%);
+      
+    }
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    flex-grow: 1;
+    border-radius: 1rem;
+    @include base-shadow;
+    border: none;
+    &:hover{
+     @include zoom;
+     background-color: lighten($couleur-primaire, 30%)
+  }
+  & i.fas{
+    color: #7e7e7e;
+    padding-right: 1rem;
+  }
+ }
+}
+

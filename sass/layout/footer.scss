@@ -1,0 +1,19 @@
+/* pied de page */
+.footer{
+    background-color: #353535;
+    .footer__titre{
+        font-family: 'Shrikhand', cursive;
+        text-align: center;
+        color: white;
+        padding: 0.3rem;
+        
+    }
+    .footer__description{
+        color: white;
+        text-align: center;
+        .i{
+            padding-right: 1rem;
+        }
+    }
+}
+
