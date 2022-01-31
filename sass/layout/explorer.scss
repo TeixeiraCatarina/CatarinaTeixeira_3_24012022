@@ -3,9 +3,12 @@
 
 /* section explorer */
 .explorer{
+    background-color: $background-restos;
     text-align: center;
   & h2{
-    margin-top: 2rem;
+    font-size: 2rem;
+    padding-top: 2rem;
+    margin-top: 0rem;
     font-size: 2rem;
   }
   & p{
@@ -19,9 +22,10 @@
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
+    @include gradient;
     @include base-shadow;
-    background-image: linear-gradient(to top, $couleur-primaire, $couleur-secondaire);
     margin-top: 1rem;
+    margin-bottom: 4rem;
   }
   & button:hover{
     @include zoom

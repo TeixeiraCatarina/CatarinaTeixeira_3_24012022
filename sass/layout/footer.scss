@@ -1,18 +1,22 @@
+
 /* pied de page */
 .footer{
-    background-color: #353535;
+    background-color: $background-footer;
+    padding-top: 2rem;
     .footer__titre{
         font-family: 'Shrikhand', cursive;
         text-align: center;
         color: white;
-        padding: 0.3rem;
-        
+        padding: 0.3rem;  
     }
     .footer__description{
         color: white;
         text-align: center;
         .i{
             padding-right: 1rem;
+        }
+        .p{
+            padding-bottom: 3rem;
         }
     }
 }

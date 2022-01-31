@@ -5,3 +5,7 @@
 @mixin zoom {
     transform: scale(1.02);
 }
+
+@mixin gradient {
+    background-image: linear-gradient(to top, $couleur-primaire, $couleur-secondaire);
+}
