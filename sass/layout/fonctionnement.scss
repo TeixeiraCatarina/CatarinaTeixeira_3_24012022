@@ -41,11 +41,16 @@
     border: none;
     &:hover{
      @include zoom;
-     background-color: lighten($couleur-primaire, 30%)
+     background-color: lighten($couleur-primaire, 30%);
+     cursor: pointer;
+     i.fas{
+       color: $couleur-primaire;
+     }
   }
   & i.fas{
     color: #7e7e7e;
     padding-right: 1rem;
+    
   }
  }
 }

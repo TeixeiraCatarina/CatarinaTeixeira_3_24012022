@@ -3,21 +3,28 @@
 .footer{
     background-color: $background-footer;
     padding-top: 2rem;
+    padding-left: 2rem;
+    font-size: 18px;
     .footer__titre{
         font-family: 'Shrikhand', cursive;
-        text-align: center;
+        text-align: left;
         color: white;
         padding: 0.3rem;  
     }
     .footer__description{
         color: white;
-        text-align: center;
-        .i{
-            padding-right: 1rem;
+        text-align: left;
+
+        .fa-utensils{
+            margin-right: 13px;
         }
-        .p{
+        .fa-hands-helping{
+            padding-right: 6px;
+        }
+        
+        p{
             padding-bottom: 3rem;
+            padding: 3px;
         }
     }
 }
-
