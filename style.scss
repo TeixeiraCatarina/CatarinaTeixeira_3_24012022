@@ -1,4 +1,8 @@
+
 @import "./sass/base/base.scss";
+
+/* loader */
+@import "./sass/layout/loader.scss";
 
 /* page d'acceuil */
 @import "./sass/layout/header.scss";
@@ -8,8 +12,8 @@
 @import "./sass/layout/restaurants.scss";
 @import "./sass/layout/footer.scss";
 
-/* resto "la palette du goût"*/
-@import "./sass/pages/resto1.scss";
+/* pages restaurants */
+@import "./sass/pages/restaurants.scss";
 
 
 

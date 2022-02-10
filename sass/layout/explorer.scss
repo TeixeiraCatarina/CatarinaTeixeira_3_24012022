@@ -16,20 +16,9 @@
     color:gray;
   } 
   & button{ 
-    cursor: pointer;
-    color: white;
-    font-weight: 300;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 2rem;
-    @include gradient;
-    @include base-shadow;
+    @include base-button;
     margin-top: 1rem;
     margin-bottom: 4rem;
-  }
-  & button:hover{
-    @include zoom
   }
 }
   

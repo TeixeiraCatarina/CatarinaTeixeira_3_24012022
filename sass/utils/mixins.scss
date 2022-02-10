@@ -1,13 +1,28 @@
 @mixin base-shadow {
-    box-shadow: 2px 1px 8px -3px #000000;
+    box-shadow: 2px 1px 8px -3px gray;
 }
 
-@mixin zoom {
-    transform: scale(1.02);
+@mixin zoom($zoom-level: 1.02){
+    transform: scale($zoom-level);
 }
 
 @mixin gradient {
     background-image: linear-gradient(to top, $couleur-primaire, $couleur-secondaire);
+}
+
+@mixin base-button {
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    @include gradient;
+    @include base-shadow;
+    &:hover{
+    @include zoom
+  }
 }
 
 @mixin heart{
@@ -26,7 +41,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 1;
-    transition: all 200ms ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 @mixin animated-heart {
