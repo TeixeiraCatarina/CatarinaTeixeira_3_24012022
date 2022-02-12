@@ -44,6 +44,9 @@ h3, p {
   border-radius: 50%;
   animation: spin 3s infinite ease-in-out;
 }
+.loader h1 {
+  display: flex;
+}
 
 @keyframes disappear {
   0% {

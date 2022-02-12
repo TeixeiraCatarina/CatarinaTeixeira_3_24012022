@@ -22,6 +22,10 @@
         border-radius: 50%;
         animation: spin 3s infinite ease-in-out;
     }
+    h1{
+        display: flex;
+
+    }
 }
 
 @keyframes disappear {
