@@ -2,7 +2,7 @@
     box-shadow: 2px 1px 8px -3px gray;
 }
 
-@mixin zoom($zoom-level: 1.02){
+@mixin zoom($zoom-level: 1.01){
     transform: scale($zoom-level);
 }
 
@@ -21,7 +21,9 @@
     @include gradient;
     @include base-shadow;
     &:hover{
-    @include zoom
+    @include zoom;
+    filter: brightness(1.09);
+    box-shadow: 0.5rem 0.5rem 1rem 0 #7e7e7e;
   }
 }
 
