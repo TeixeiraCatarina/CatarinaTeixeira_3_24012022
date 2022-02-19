@@ -1,19 +1,18 @@
 
 @import "./sass/base/base.scss";
 
-/* loader */
-@import "./sass/layout/loader.scss";
+@import "./sass/componants/loader.scss";
 
 /* page d'acceuil */
 @import "./sass/layout/header.scss";
-@import "./sass/layout/localisation.scss";
-@import "./sass/layout/explorer.scss";
-@import "./sass/layout/fonctionnement.scss";
-@import "./sass/layout/restaurants.scss";
+@import "./sass/pages/localisation.scss";
+@import "./sass/pages/explorer.scss";
+@import "./sass/pages/fonctionnement.scss";
+@import "./sass/pages/restos_home.scss";
 @import "./sass/layout/footer.scss";
 
 /* pages restaurants */
-@import "./sass/pages/restaurants.scss";
+@import "./sass/layout/restaurants.scss";
 
 
 

@@ -1,54 +1,133 @@
+@import "../utils/mixins.scss";
+@import "../utils/animations.scss";
 
-/* section restaurants */
-.restaurants{
-    background-color: $background-restos;
-    padding: 2rem 2rem 4rem 2rem;
-    margin-top: 4rem;
-    
-     .restaurants__cards{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
-        @media (max-width: 1000px){
-            grid-template-columns: repeat(1,1fr);
+/* restaurants */
+
+header{
+    position: relative;
+    .fas{
+        position: absolute;
+        left: 2rem;
+        top: 40%;
+        font-size: 1.5rem;
+        &:hover{
+            @include zoom(1.20);
         }
-        .new{
-            position: relative;
-        }
-        .new::before{
-            content: "Nouveau";
-            position: absolute;
-            height: 2rem;
-            width: 5rem;
-            background-color: $couleur-terciaire;
-            color: darken($couleur-terciaire, $amount: 40%);
-            display: grid;
-            place-items: center;
-            right: 1rem;
-            top: 1rem;
-        }
-    }
-    
-    .card{
-        background-color: white;
-        border-radius: 1rem 1rem 1rem 1rem;
-        &__img{
-            height: 15rem;
-            border-radius: 1rem 1rem 0 0;
-            background-size: cover;
-        }
-        @for $i from 1 through 4{
-            &__img-#{$i} {
-                background-image: url("./images/resto-#{$i}.jpg");
-            }
-        }
-        &__description{
-            @include animated-heart;  
-        }
-            h3 , p{
-                margin: 0.5rem;
-            }           
     }
 }
 
+.banner img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    display: block;
+}
 
+main{
+    position: relative;
+    background-color: $background-restos;
+    border-radius: 3rem 3rem 0 0;
+    margin-top: -3rem;
+    padding: 2rem 1rem;
+    h2{
+        font-family: 'Shrikhand', cursive;
+        padding-left: 2rem; 
+        @include animated-heart;
+        cursor: pointer;
+    }
+    .menus{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        @media (max-width: 1000px) {
+            grid-template-columns: 1fr;
+        }
+        .menus__category {
+            overflow: hidden;
+            h3{
+            margin-left: 1.5rem;
+            font-weight: 300;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: $couleur-terciaire;
+                top: 1.5rem;
+                left: 0;
+                height: 0.25rem;
+                width: 3rem;
+                }
+            }
+        }
+    }
+    .plats{
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}){
+                animation-delay: 1s * $i;
+            }
+        }
+        background-color: white;
+        border-radius: 13px;
+        margin: 1rem;
+        display: flex;
+        overflow: hidden;
+        @include base-shadow;
+        cursor: pointer;
+        animation: appear 1s;
+        animation-fill-mode: both;
+        .plats__description{
+            overflow: hidden;
+            h4, p{
+                margin: 0;
+                padding-left: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        
+        h4{
+            padding-top: 1rem;
+            font-weight: 500;
+        }
+        p{
+            padding-bottom: 0.5rem;
+            font-weight: 100;
+        }
+        .prix{
+            margin-left: auto;
+            padding-right: 0.75rem;
+            font-weight: bold;
+            padding-top: 2rem;
+        }
+        .plats__check{
+            color: white;
+            display: grid;
+            place-items: center;
+            background-color: $couleur-terciaire;
+            margin-right: -4rem;
+            width: 4rem;
+            font-size: 1.5rem;
+            transition: all 0.5s;
+        }
+        &:hover {  
+            .plats__check{
+                margin-right: 0;
+                flex-shrink: 0;
+            }
+            i{
+                @include spiner;
+                animation: spiner 0.5s ease-in-out;
+            }
+        }
+
+    }
+    .order{
+        height: 30vh;
+        display: grid;
+        place-items: center;
+        button{
+            @include base-button;
+        }
+    } 
+}
