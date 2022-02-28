@@ -29,9 +29,9 @@
             width: 1rem;
             animation: loader 1s backwards infinite alternate ease-in-out;
             @for $i from 1 through 5 {
-                &:nth-child(5n + #{$i}){
-                  animation-delay: #{($i) * 0.2}s;
-                  background: nth($loader-color, $i);
+                &:nth-child(#{$i}){
+                  animation-delay: 0.2s*$i;
+                  background: nth($loader-color,$i);
                 }
             }
         }

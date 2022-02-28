@@ -37,7 +37,8 @@
             object-fit: cover;
             height: 17rem;
             border-radius: 1rem 1rem 0 0;
-            background-size: cover;     
+            background-size: cover;   
+            background-position: right;  
         }
         @for $i from 1 through 4{
             &__img-#{$i} {

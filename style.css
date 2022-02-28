@@ -49,23 +49,23 @@ h3, p {
   width: 1rem;
   animation: loader 1s backwards infinite alternate ease-in-out;
 }
-.loading .loader__bar:nth-child(5n+1) {
+.loading .loader__bar:nth-child(1) {
   animation-delay: 0.2s;
   background: #9356DC;
 }
-.loading .loader__bar:nth-child(5n+2) {
+.loading .loader__bar:nth-child(2) {
   animation-delay: 0.4s;
   background: #FF79DA;
 }
-.loading .loader__bar:nth-child(5n+3) {
+.loading .loader__bar:nth-child(3) {
   animation-delay: 0.6s;
   background: #99E2D0;
 }
-.loading .loader__bar:nth-child(5n+4) {
+.loading .loader__bar:nth-child(4) {
   animation-delay: 0.8s;
   background: #9356DC;
 }
-.loading .loader__bar:nth-child(5n+5) {
+.loading .loader__bar:nth-child(5) {
   animation-delay: 1s;
   background: #FF79DA;
 }
@@ -258,6 +258,7 @@ header {
   height: 17rem;
   border-radius: 1rem 1rem 0 0;
   background-size: cover;
+  background-position: right;
 }
 .restaurants .card__img-1 {
   background-image: url("./images/resto-1.jpg");
